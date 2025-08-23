@@ -1,0 +1,67 @@
+.servers-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.server-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: border var(--transition), transform var(--transition);
+}
+
+.server-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px var(--color-primary-glow);
+}
+
+.server-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.server-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.server-date {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.server-image {
+  flex-shrink: 0;
+  width: 120px;   /* увеличенный размер */
+  height: 90px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Мобильная адаптация — картинка остаётся справа */
+@media (max-width: 480px) {
+  .server-card {
+    flex-direction: row; /* всегда в одну линию */
+    align-items: center;
+  }
+
+  .server-info {
+    flex: 1;
+  }
+
+  .server-image {
+    width: 100px;  /* чуть меньше на мобильных */
+    height: 75px;
+  }
+}

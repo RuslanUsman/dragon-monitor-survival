@@ -1,0 +1,32 @@
+:root {
+  --color-bg: #0f0f10;
+  --color-surface: #1a1a1d;
+  --color-primary: #00d4ff;
+  --color-primary-glow: rgba(0, 212, 255, 0.4);
+  --color-text: #ffffff;
+  --color-text-muted: #a0a0a0;
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}

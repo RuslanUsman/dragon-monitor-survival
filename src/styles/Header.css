@@ -1,0 +1,50 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(8px);
+  background-color: rgba(15, 15, 16, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.header-logo span {
+  color: var(--color-primary);
+}
+
+/* Навигация */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Кнопки навигации одинакового размера */
+.header-nav .btn {
+  min-width: 180px; /* одинаковая ширина */
+  text-align: center;
+  white-space: nowrap; /* не переносить текст */
+  overflow: hidden;
+  text-overflow: ellipsis; /* если текст слишком длинный */
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+}

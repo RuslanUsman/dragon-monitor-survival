@@ -1,0 +1,46 @@
+.home-section {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-content: center; /* центрируем сетку */
+}
+
+@media (min-width: 640px) {
+  .home-section {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+.home-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  /* уменьшили высоту */
+  min-height: 150px;
+
+  transition: border var(--transition), transform var(--transition);
+}
+
+.home-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px var(--color-primary-glow);
+}
+
+.home-card-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.home-card button {
+  margin-top: auto;
+  width: 100%;
+}

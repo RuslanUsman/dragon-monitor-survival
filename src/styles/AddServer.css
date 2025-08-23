@@ -1,0 +1,78 @@
+.add-server-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.add-server-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.add-server-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.add-server-form label {
+  font-weight: 600;
+}
+
+.add-server-form input,
+.add-server-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid #333;
+  background: #111;
+  color: var(--color-text);
+  font-size: 1rem;
+  transition: border var(--transition);
+}
+
+.add-server-form input:focus,
+.add-server-form textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.add-server-image-preview {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.add-server-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.add-server-actions .btn {
+  min-width: 150px;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .add-server-container {
+    padding: 1rem;
+  }
+
+  .add-server-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .add-server-actions .btn {
+    width: 100%;
+  }
+}

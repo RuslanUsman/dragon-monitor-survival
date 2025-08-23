@@ -1,0 +1,43 @@
+/* Тёмная тема по умолчанию */
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+  background: radial-gradient(80% 60% at 50% 0%, #0f1622 0%, #0b0f14 60%);
+  color: #e6f1ff;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Плавное появление/уход страниц */
+.page-enter { animation: fadeSlideIn 0.35s ease forwards; }
+.page-exit  { animation: fadeSlideOut 0.25s ease forwards; }
+
+/* Скелетон */
+.skeleton {
+  background: linear-gradient(90deg, #1a2432 25%, #223044 37%, #1a2432 63%);
+  background-size: 400% 100%;
+  animation: skeleton 1.4s ease infinite;
+}
+
+/* keyframes для локальных анимаций */
+@keyframes skeleton {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+@keyframes fadeSlideIn {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeSlideOut {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-8px); }
+}
+/* breathing — если хочешь использовать вне tailwind.config */
+@keyframes breathing {
+  0%, 100% { box-shadow: 0 0 14px rgba(0,229,255,0.35); }
+  50% { box-shadow: 0 0 28px rgba(0,229,255,0.6); }
+}

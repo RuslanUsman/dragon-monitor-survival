@@ -1,0 +1,40 @@
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+  background: var(--color-surface);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.5rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  transition: background var(--transition);
+}
+
+.footer-inner:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+/* Адаптивность */
+@media (min-width: 640px) {
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
