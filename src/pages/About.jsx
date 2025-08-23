@@ -7,7 +7,7 @@ export default function About() {
       <div className="about-container">
         {/* Логотип с breathing glow */}
         <img
-          src="/images/dragon-logo.png"
+          src={`${import.meta.env.BASE_URL}images/dragon-logo.png`}
           alt="Dragon Monitor Survival"
           className="about-logo"
         />
