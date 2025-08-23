@@ -48,3 +48,32 @@
     display: none;
   }
 }
+
+
+input:focus {
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+
+.search-input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #e0f7ff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+.search-input::placeholder {
+  color: rgba(224, 247, 255, 0.6);
+}
+
+.search-input:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.8), 0 0 24px rgba(0, 200, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
+}

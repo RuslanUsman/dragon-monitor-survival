@@ -4,6 +4,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App';
 
+
+
+
+import '/src/assets/favicon.ico';
+
+
 import Home from './pages/Home';
 import Servers from './pages/Servers';
 import ServerDetails from './pages/ServerDetails';

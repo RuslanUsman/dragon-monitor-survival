@@ -9,7 +9,7 @@ export default function Footer() {
           © {new Date().getFullYear()} Dragan Monitor Survival
         </div>
         <a
-          href="https://t.me/your_telegram_username"
+          href="https://t.me/Dragon010101"
           target="_blank"
           rel="noreferrer"
           className="footer-link"
