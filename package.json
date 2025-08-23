@@ -10,8 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "tw:build": "tailwindcss -i ./src/tw-input.css -o ./src/tw.css --watch",
-    "predeploy": "npm run build && cp dist/index.html dist/404.html",
-
+    "predeploy": "npm run build && npx cpx dist/index.html dist/404.html",
     "deploy": "npm run predeploy && gh-pages -d dist"
   },
   "dependencies": {

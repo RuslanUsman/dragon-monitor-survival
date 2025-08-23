@@ -7,16 +7,17 @@
     <!-- Название вкладки -->
     <title>Dragon Monitor Survival</title>
 
-    <!-- Подключение favicon -->
-   <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
-
+    <!-- Фавикон с учётом base -->
+    <link rel="icon" type="image/x-icon" href="%BASE_URL%favicon.ico" />
 
     <!-- Можно добавить альтернативные форматы иконок -->
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /> -->
-    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> -->
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="%BASE_URL%favicon-32x32.png" /> -->
+    <!-- <link rel="apple-touch-icon" href="%BASE_URL%apple-touch-icon.png" /> -->
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Подключение основного скрипта с учётом base -->
+    <script type="module" src="%BASE_URL%src/main.jsx"></script>
   </body>
 </html>

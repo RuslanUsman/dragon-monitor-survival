@@ -1,12 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig(({ mode }) => {
-  const isProd = mode === 'production'; // определяем, прод или нет
+// Имя репозитория для GitHub Pages
+const repoName = 'dragon-monitor-survival';
 
-  return {
-    plugins: [react()],
-    // В dev — '/', в продакшене (GitHub Pages) — '/dragon-monitor-survival/'
-    base: isProd ? '/dragon-monitor-survival/' : '/',
-  };
-});
+export default defineConfig(({ command }) => ({
+  plugins: [react()],
+  // В dev — '/', в продакшене (vite build) — '/dragon-monitor-survival/'
+  base: command === 'build' ? `/${repoName}/` : '/',
+}));
